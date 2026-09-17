@@ -11,6 +11,7 @@
   <h1>🏅 Olimpiadi</h1>
   <nav>
     <button data-schermata="gara" class="attivo">Gara</button>
+    <button data-schermata="campionato">Campionato</button>
     <button data-schermata="atleti">Atleti</button>
     <button data-schermata="squadre">Squadre</button>
     <button data-schermata="albo">Albo d'oro</button>
@@ -21,11 +22,13 @@
   <section id="gara" class="schermata attiva">
     <div class="barra">
       <label>Disciplina <select id="sel-disciplina"><option value="">🎲 Casuale</option></select></label>
+      <label id="lbl-circuito" class="nascosto">Circuito <select id="sel-circuito"><option value="">🎲 Casuale</option></select></label>
       <button id="btn-nuova-gara" class="primario">▶ Nuova gara</button>
       <label>Seme <input id="inp-seme" type="number" placeholder="casuale" style="width:9em"></label>
       <button id="btn-rigioca">↻ Rigioca</button>
     </div>
     <div id="cartellone" class="cartellone nascosto"></div>
+    <div id="slot-arena-gara" class="slot-arena">
     <div id="arena" class="arena nascosto">
       <div class="titolo-gara" id="titolo-gara"></div>
       <canvas id="canvas-pista"></canvas>
@@ -41,6 +44,27 @@
     </div>
     <div id="risultato"></div>
     <div id="podio" class="podio nascosto"></div>
+    </div>
+  </section>
+
+  <section id="campionato" class="schermata">
+    <div id="campionato-nuovo">
+      <h2>Nuovo campionato</h2>
+      <p class="muto">Partecipano i piloti che hanno una scuderia in questo momento: le formazioni restano bloccate fino alla fine del campionato.</p>
+      <div id="tappe-scelta" class="tappe-scelta"></div>
+      <div class="barra">
+        <label><input type="checkbox" id="chk-mescola"> Ordine casuale delle tappe</label>
+        <label>Seme <input id="inp-seme-camp" type="number" placeholder="casuale" style="width:9em"></label>
+        <button id="btn-crea-campionato" class="primario">🏁 Crea campionato</button>
+      </div>
+      <p id="campionato-avviso" class="avviso"></p>
+    </div>
+    <div id="campionato-corso" class="nascosto">
+      <div class="cartellone" id="campionato-testa"></div>
+      <div id="slot-arena-campionato" class="slot-arena"></div>
+      <div id="campionato-classifiche"></div>
+      <div class="barra"><button id="btn-abbandona-campionato" class="pericolo">Abbandona campionato</button></div>
+    </div>
   </section>
 
   <section id="atleti" class="schermata">
@@ -97,4 +121,4 @@
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
-<!-- build 2026-09-17T18:46Z da olimpiadi@3cc7441 -->
+<!-- build 2026-09-17T19:02Z da olimpiadi@62f4b0e -->

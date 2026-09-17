@@ -140,3 +140,11 @@ table.rosa .azioni-g button { padding: .1rem .4rem; font-size: .8rem; }
 #blocco-scuderie .barra h2 { margin: 0 .5rem 0 0; }
 table.rosa tr.vuoto td { color: var(--muto); }
 table.rosa select { font-size: .85rem; padding: .15rem .3rem; }
+
+.tappe-scelta { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: .5rem; margin: .6rem 0 1rem; }
+.tappe-scelta .tappa { display: block; background: var(--pannello); border: 1px solid var(--bordo); border-radius: .5rem; padding: .5rem .7rem; cursor: pointer; }
+.tappe-scelta .tappa:has(input:checked) { border-color: var(--accento); }
+.piccolo { font-size: .8rem; }
+.campione { font-size: 1.05rem; margin: .6rem 0 0; }
+table.classifica-camp td.vittoria { color: var(--accento); font-weight: 700; }
+table.classifica-camp th.num { font-size: .75rem; }
