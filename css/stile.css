@@ -66,7 +66,7 @@ tr.fuori { color: var(--muto); }
 .eventi { margin-top: 1rem; }
 .eventi li { padding: .2rem 0; }
 
-.lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .8rem; }
+.lista { align-items: start; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .8rem; }
 .scheda {
   background: var(--pannello); border: 1px solid var(--bordo); border-radius: .6rem; padding: .8rem;
 }
@@ -127,3 +127,10 @@ table.rosa .azioni-g button { padding: .1rem .4rem; font-size: .8rem; }
 .gruppo button { border-radius: .4rem 0 0 .4rem; }
 .gruppo select { border-radius: 0 .4rem .4rem 0; border-left: 0; }
 #form-scheda menu .sinistra { margin-right: auto; }
+
+.scheda.squadra h3 { cursor: pointer; user-select: none; }
+.scheda.squadra h3 .freccia { color: var(--accento); width: 1rem; display: inline-block; }
+.scheda.squadra h3 .n-rosa { font-weight: normal; font-size: .8rem; margin-left: auto; margin-right: .8rem; }
+.scheda.squadra.chiusa .dettaglio { display: none; }
+.scheda.squadra.chiusa { grid-column: span 1; }
+.fuori-ruolo { color: var(--accento); font-size: .8em; }
