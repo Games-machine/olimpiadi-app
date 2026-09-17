@@ -134,3 +134,9 @@ table.rosa .azioni-g button { padding: .1rem .4rem; font-size: .8rem; }
 .scheda.squadra.chiusa .dettaglio { display: none; }
 .scheda.squadra.chiusa { grid-column: span 1; }
 .fuori-ruolo { color: var(--accento); font-size: .8em; }
+
+.pallino { display: inline-block; width: .7em; height: .7em; border-radius: 50%; margin-right: .35em; vertical-align: -0.02em; border: 1px solid rgba(255,255,255,.3); }
+#blocco-scuderie h2 { font-size: 1.1rem; margin: .8rem 0 .4rem; }
+#blocco-scuderie .barra h2 { margin: 0 .5rem 0 0; }
+table.rosa tr.vuoto td { color: var(--muto); }
+table.rosa select { font-size: .85rem; padding: .15rem .3rem; }

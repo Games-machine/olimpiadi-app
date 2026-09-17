@@ -50,6 +50,16 @@
       <button id="btn-azzera" class="pericolo">Azzera tutto</button>
     </div>
     <div id="filtri-atleti" class="filtri"></div>
+    <div id="blocco-scuderie" class="nascosto">
+      <div class="barra">
+        <h2>Scuderie</h2>
+        <button id="btn-nuova-scuderia">+ Scuderia</button>
+        <span class="gruppo"><button id="btn-scuderia-casuale">🎲 Scuderia casuale</button><select id="sel-fascia-sc" title="Livello dell'auto generata"></select></span>
+        <button id="btn-assegna-liberi" title="Mette i piloti senza scuderia nei sedili vuoti, i migliori alle auto migliori">Assegna piloti liberi</button>
+      </div>
+      <div id="lista-scuderie" class="lista"></div>
+      <h2>Piloti</h2>
+    </div>
     <div id="lista-atleti" class="lista"></div>
   </section>
 
@@ -73,6 +83,7 @@
     <label id="dlg-nazione">Nazione <select name="nazione"></select></label>
     <label id="dlg-disciplina">Disciplina <select name="disciplina"></select></label>
     <label id="dlg-ruolo">Ruolo <select name="ruolo"></select></label>
+    <label id="dlg-colore">Colore <input type="color" name="colore" value="#e11d48"></label>
     <div id="dlg-caratteristiche"></div>
     <menu>
       <button type="button" id="btn-casuale" class="sinistra">🎲 Casuale</button>
@@ -85,4 +96,4 @@
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
-<!-- build 2026-09-17T18:33Z da olimpiadi@74f25d8 -->
+<!-- build 2026-09-17T18:45Z da olimpiadi@f630473 -->
