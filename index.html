@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olimpiadi</title>
+<link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+<header>
+  <h1>🏅 Olimpiadi</h1>
+  <nav>
+    <button data-schermata="gara" class="attivo">Gara</button>
+    <button data-schermata="atleti">Atleti</button>
+    <button data-schermata="squadre">Squadre</button>
+    <button data-schermata="albo">Albo d'oro</button>
+  </nav>
+</header>
+
+<main>
+  <section id="gara" class="schermata attiva">
+    <div class="barra">
+      <label>Disciplina <select id="sel-disciplina"><option value="">🎲 Casuale</option></select></label>
+      <button id="btn-nuova-gara" class="primario">▶ Nuova gara</button>
+      <label>Seme <input id="inp-seme" type="number" placeholder="casuale" style="width:9em"></label>
+      <button id="btn-rigioca">↻ Rigioca</button>
+    </div>
+    <div id="cartellone" class="cartellone nascosto"></div>
+    <div id="arena" class="arena nascosto">
+      <div class="titolo-gara" id="titolo-gara"></div>
+      <canvas id="canvas-pista"></canvas>
+      <div class="controlli">
+        <button id="btn-via" class="primario">▶ Via!</button>
+        <button id="btn-pausa">⏸ Pausa</button>
+        <span class="gruppo">Velocità
+          <button data-vel="0.25">¼×</button><button data-vel="1" class="attivo">1×</button><button data-vel="4">4×</button>
+        </span>
+        <button id="btn-salta">⏭ Risultato</button>
+        <button id="btn-prossima" class="primario nascosto">▶ Prossima gara</button>
+      </div>
+    </div>
+    <div id="risultato"></div>
+    <div id="podio" class="podio nascosto"></div>
+  </section>
+
+  <section id="atleti" class="schermata">
+    <div class="barra">
+      <button id="btn-nuovo-atleta" class="primario">+ Nuovo atleta</button>
+      <button id="btn-esempio">Popola con esempi</button>
+      <button id="btn-azzera" class="pericolo">Azzera tutto</button>
+    </div>
+    <div id="filtri-atleti" class="filtri"></div>
+    <div id="lista-atleti" class="lista"></div>
+  </section>
+
+  <section id="squadre" class="schermata">
+    <div class="barra">
+      <button id="btn-nuova-squadra" class="primario">+ Nuova squadra</button>
+    </div>
+    <div id="lista-squadre" class="lista"></div>
+  </section>
+
+  <section id="albo" class="schermata">
+    <div id="lista-albo"></div>
+  </section>
+</main>
+
+<dialog id="dlg-scheda">
+  <form method="dialog" id="form-scheda">
+    <h2 id="dlg-titolo">Scheda</h2>
+    <label>Nome <input name="nome" required></label>
+    <label>Nazione <select name="nazione"></select></label>
+    <label id="dlg-disciplina">Disciplina <select name="disciplina"></select></label>
+    <div id="dlg-caratteristiche"></div>
+    <menu>
+      <button value="annulla">Annulla</button>
+      <button value="ok" class="primario">Salva</button>
+    </menu>
+  </form>
+</dialog>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
+<!-- build 2026-09-17T18:08Z da olimpiadi@61c781d -->

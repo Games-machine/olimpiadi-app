@@ -1,0 +1,113 @@
+:root {
+  --sfondo: #0f172a;
+  --pannello: #1e293b;
+  --bordo: #334155;
+  --testo: #e2e8f0;
+  --muto: #94a3b8;
+  --accento: #f59e0b;
+  --oro: #fbbf24; --argento: #cbd5e1; --bronzo: #d97706;
+  --pericolo: #ef4444;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, sans-serif; background: var(--sfondo); color: var(--testo);
+}
+header {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding: .6rem 1rem; background: var(--pannello); border-bottom: 1px solid var(--bordo);
+}
+header h1 { margin: 0; font-size: 1.3rem; }
+nav { display: flex; gap: .3rem; flex-wrap: wrap; }
+nav button { background: none; border: 1px solid transparent; color: var(--muto); }
+nav button.attivo { color: var(--testo); border-color: var(--bordo); background: var(--sfondo); }
+
+main { padding: 1rem; max-width: 1100px; margin: 0 auto; }
+.schermata { display: none; }
+.schermata.attiva { display: block; }
+
+button {
+  cursor: pointer; padding: .45rem .9rem; border-radius: .4rem; font-size: .95rem;
+  border: 1px solid var(--bordo); background: var(--pannello); color: var(--testo);
+}
+button:hover { filter: brightness(1.2); }
+button.primario { background: var(--accento); color: #111; border-color: var(--accento); font-weight: 600; }
+button.pericolo { border-color: var(--pericolo); color: var(--pericolo); }
+input, select { padding: .35rem .5rem; border-radius: .3rem; border: 1px solid var(--bordo); background: var(--sfondo); color: var(--testo); }
+
+.barra { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+.nascosto { display: none !important; }
+
+.cartellone {
+  background: var(--pannello); border: 1px solid var(--bordo); border-radius: .6rem;
+  padding: 1rem 1.2rem; margin-bottom: 1rem;
+}
+.cartellone h2 { margin: 0 0 .3rem; }
+.cartellone .sotto { color: var(--muto); }
+
+table { width: 100%; border-collapse: collapse; background: var(--pannello); border-radius: .6rem; overflow: hidden; }
+th, td { padding: .5rem .7rem; text-align: left; border-bottom: 1px solid var(--bordo); }
+th { color: var(--muto); font-weight: 500; font-size: .85rem; text-transform: uppercase; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.oro td:first-child { color: var(--oro); font-weight: 700; }
+tr.argento td:first-child { color: var(--argento); font-weight: 700; }
+tr.bronzo td:first-child { color: var(--bronzo); font-weight: 700; }
+tr.fuori { color: var(--muto); }
+
+.arena {
+  background: var(--pannello); border: 1px solid var(--bordo); border-radius: .6rem;
+  padding: .6rem; margin-bottom: 1rem;
+}
+.arena canvas { display: block; width: 100%; border-radius: .4rem; background: #14532d; }
+.controlli { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: .6rem; }
+.controlli .gruppo { display: inline-flex; gap: .2rem; align-items: center; color: var(--muto); margin-left: .5rem; }
+.controlli .gruppo button { padding: .3rem .6rem; }
+.controlli button.attivo { border-color: var(--accento); color: var(--accento); }
+
+.eventi { margin-top: 1rem; }
+.eventi li { padding: .2rem 0; }
+
+.lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .8rem; }
+.scheda {
+  background: var(--pannello); border: 1px solid var(--bordo); border-radius: .6rem; padding: .8rem;
+}
+.scheda h3 { margin: 0 0 .5rem; display: flex; justify-content: space-between; }
+.scheda .naz { color: var(--muto); font-size: .85rem; }
+.barre { display: grid; grid-template-columns: 6.5em 1fr 2.2em; gap: .2rem .5rem; font-size: .85rem; align-items: center; }
+.barre .barra-car { height: .55rem; background: var(--sfondo); border-radius: 1rem; overflow: hidden; }
+.barre .barra-car > div { height: 100%; background: var(--accento); }
+.scheda .azioni { margin-top: .6rem; display: flex; gap: .4rem; }
+.scheda .azioni button { padding: .25rem .6rem; font-size: .85rem; }
+
+dialog { background: var(--pannello); color: var(--testo); border: 1px solid var(--bordo); border-radius: .6rem; min-width: 320px; }
+dialog::backdrop { background: rgba(0,0,0,.6); }
+dialog label { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: .5rem 0; }
+dialog input[type=range] { flex: 1; }
+dialog menu { display: flex; justify-content: flex-end; gap: .5rem; padding: 0; margin: 1rem 0 0; }
+.valore-car { width: 2.5em; text-align: right; font-variant-numeric: tabular-nums; }
+
+.muto { color: var(--muto); }
+.cartellone h2 .sotto { font-size: .9rem; font-weight: 400; }
+.programma { margin: .4rem 0 0; padding-left: 1.3rem; }
+.programma li { padding: .1rem 0; color: var(--muto); }
+.programma li.in-corso { color: var(--accento); font-weight: 600; }
+.programma li.fatta { color: var(--testo); text-decoration: line-through; opacity: .7; }
+.titolo-gara { font-weight: 700; font-size: 1.1rem; margin: 0 0 .5rem .2rem; }
+tr.qualificato td:first-child, td.q { color: #4ade80; font-weight: 700; }
+tr.eliminato { color: var(--muto); }
+
+.podio { background: var(--pannello); border: 1px solid var(--bordo); border-radius: .6rem; padding: 1rem; margin-top: 1rem; }
+.podio h2 { margin: 0 0 1rem; text-align: center; }
+.gradini { display: flex; justify-content: center; align-items: flex-end; gap: .6rem; }
+.gradino { width: 30%; max-width: 220px; text-align: center; }
+.gradino .nome { font-weight: 600; margin-bottom: .4rem; }
+.gradino .blocco { border-radius: .4rem .4rem 0 0; padding: .6rem; font-size: 1.3rem; color: #111; font-weight: 700; }
+.gradino.oro .blocco { background: var(--oro); height: 110px; }
+.gradino.argento .blocco { background: var(--argento); height: 85px; }
+.gradino.bronzo .blocco { background: var(--bronzo); height: 65px; }
+
+.filtri { display: flex; gap: .3rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.filtri button { padding: .3rem .7rem; font-size: .9rem; }
+.filtri button.attivo { border-color: var(--accento); color: var(--accento); }
+.scheda .disc { font-size: .8rem; margin: -.3rem 0 .4rem; }
+dialog .descr { font-size: .75rem; margin: -.4rem 0 .5rem; }
+dialog select:disabled { opacity: .6; }
