@@ -126,6 +126,8 @@ table.rosa .azioni-g button { padding: .1rem .4rem; font-size: .8rem; }
 .gruppo { display: inline-flex; }
 .gruppo button { border-radius: .4rem 0 0 .4rem; }
 .gruppo select { border-radius: 0 .4rem .4rem 0; border-left: 0; }
+.gruppo input { border-radius: .4rem 0 0 .4rem; }
+.gruppo input + button { border-radius: 0 .4rem .4rem 0; border-left: 0; padding: .3rem .5rem; }
 #form-scheda menu .sinistra { margin-right: auto; }
 
 .scheda.squadra h3 { cursor: pointer; user-select: none; }

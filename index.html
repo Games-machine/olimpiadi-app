@@ -25,7 +25,7 @@
       <label id="lbl-circuito" class="nascosto">Circuito <select id="sel-circuito"><option value="">🎲 Casuale</option></select></label>
       <label id="lbl-pista" class="nascosto">Pista <select id="sel-pista"><option value="">🎲 Casuale</option></select></label>
       <button id="btn-nuova-gara" class="primario">▶ Nuova gara</button>
-      <label>Seme <input id="inp-seme" type="number" placeholder="casuale" style="width:9em"></label>
+      <label>Seme <span class="gruppo"><input id="inp-seme" type="number" placeholder="casuale" style="width:9em"><button type="button" id="btn-seme-dado" title="Estrai un seme a caso">🎲</button></span></label>
       <button id="btn-rigioca">↻ Rigioca</button>
     </div>
     <div id="cartellone" class="cartellone nascosto"></div>
@@ -57,7 +57,7 @@
       <div id="tappe-scelta" class="tappe-scelta"></div>
       <div class="barra">
         <label><input type="checkbox" id="chk-mescola"> Ordine casuale delle tappe</label>
-        <label>Seme <input id="inp-seme-camp" type="number" placeholder="casuale" style="width:9em"></label>
+        <label>Seme <span class="gruppo"><input id="inp-seme-camp" type="number" placeholder="casuale" style="width:9em"><button type="button" id="btn-seme-camp-dado" title="Estrai un seme a caso">🎲</button></span></label>
         <button id="btn-crea-campionato" class="primario">🏁 Crea campionato</button>
       </div>
       <p id="campionato-avviso" class="avviso"></p>
@@ -124,4 +124,4 @@
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
-<!-- build 2026-09-18T15:56Z da olimpiadi@9bf4825 -->
+<!-- build 2026-09-18T15:58Z da olimpiadi@7e2bbdd -->
