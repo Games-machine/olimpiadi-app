@@ -147,6 +147,7 @@ table.rosa select { font-size: .85rem; padding: .15rem .3rem; }
 .tappe-scelta .tappa { display: block; background: var(--pannello); border: 1px solid var(--bordo); border-radius: .5rem; padding: .5rem .7rem; cursor: pointer; }
 .tappe-scelta .tappa:has(input:checked) { border-color: var(--accento); }
 .piccolo { font-size: .8rem; }
+.filtri .sep { display: inline-block; width: 1px; height: 1.4em; background: var(--bordo, #334155); margin: 0 .4rem; vertical-align: middle; }
 .campione { font-size: 1.05rem; margin: .6rem 0 0; }
 table.classifica-camp td.vittoria { color: var(--accento); font-weight: 700; }
 table.classifica-camp th.num { font-size: .75rem; }
